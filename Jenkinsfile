@@ -11,7 +11,7 @@ pipeline {
 
     stages {
 
-        stage('Deploy Docker Container') {
+        stage('Deploy Docker Container 1') {
             steps {
                 echo '🚀 Deploying Docker container to EC2...'
 
