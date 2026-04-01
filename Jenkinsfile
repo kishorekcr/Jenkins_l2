@@ -31,7 +31,7 @@ pipeline {
                             # run new container
                             docker run -d \
                                 --name ${CONTAINER_NAME} \
-                                -p ${APP_PORT}:8080 \
+                                -p ${APP_PORT}:8081 \
                                 ${IMAGE_NAME}
                         '
                     """
