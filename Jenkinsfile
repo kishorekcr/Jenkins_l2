@@ -31,7 +31,7 @@ pipeline {
                             # run new container
                             docker run -d \
                                 --name ${CONTAINER_NAME} \
-                                -p 8081:8000 \
+                                -p 8081:8080 \
                                 ${IMAGE_NAME}
                         '
                     """
