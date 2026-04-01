@@ -26,12 +26,12 @@ pipeline {
                             docker stop ${CONTAINER_NAME} || true &&
 
                             # remove old container
-                            docker rm ${CONTAINER_NAME} || true &&
+                             docker rm -f ${CONTAINER_NAME} 2>/dev/null || true
 
                             # run new container
                             docker run -d \
                                 --name ${CONTAINER_NAME} \
-                                -p ${APP_PORT}:8081 \
+                                -p 8081:8000 \
                                 ${IMAGE_NAME}
                         '
                     """
